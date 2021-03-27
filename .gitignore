@@ -102,3 +102,18 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Custom
+.zip
+build/
+*.docx
+.vscode/
+
+# Backup
+backup.bat
+Backup_Excludes.txt
+backup/
+
+# BW Local
+history
+vscode
