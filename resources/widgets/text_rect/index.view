@@ -1,0 +1,6 @@
+<defs>
+  <symbol id="text-rect" type="text-rect" class="widget-auto" >
+    <rect id="rect" opacity="0.5" />
+    <text id="text" text-length="8" />  <!-- TODO ensure text-length can be over-ridden -->
+  </symbol>
+</defs>
