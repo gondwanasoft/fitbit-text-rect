@@ -1,0 +1,19 @@
+#myTextRect rect {
+  opacity: 0.8;
+}
+
+#myTextRect text {
+  font-size: 10;
+  text-length: 32;  /* Doesn't work, unfortunately; must change text-length in <use> */
+}
+
+#myTextRect2 rect {
+  rx: 10;
+  ry: 10;
+}
+
+#myTextRect2 text {
+  text-length: 32;  /* Doesn't work, unfortunately; must change text-length in <use> */
+  fill: green;
+  text-buffer: "myTextRect2";
+}
