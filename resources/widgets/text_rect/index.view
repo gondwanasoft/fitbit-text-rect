@@ -1,7 +1,7 @@
 <defs>
   <symbol id="text-rect" type="text-rect" class="text-rect widget-auto" >
     <rect id="rect" />
-    <text id="text" class="text-rect-text" />
+    <text id="text" />
   </symbol>
 </defs>
-<!-- TODO 3 probably want widget-auto to apply to individual instances in resources/index.view, rather than to all uses of this symbol -->
+<!-- TODO 3.2 probably want widget-auto to apply to individual instances in resources/index.view, rather than to all uses of this symbol -->
