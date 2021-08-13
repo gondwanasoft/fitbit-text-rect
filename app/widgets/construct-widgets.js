@@ -6,7 +6,6 @@ export const constructWidgets = (widgetType, construct) => {
   const widgets = document.getElementsByTypeName(widgetType);
   widgets.forEach(widget => {
     if (widget.id !== widget.type) {    // needed because old firmware will find the <use> AND the <symbol> for each widget instance
-      widget.class = widget.class;    // bring forward (ie, trigger) application of CSS styles
       construct(widget);
       // TODO 3.5 distinguish between 'construct' (add members to el) and 'draw' (lay out visible elements); need 'autoDraw' in config.js?
     }
