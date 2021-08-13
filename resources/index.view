@@ -21,4 +21,4 @@
   </use>
 
 </svg>
-<!-- TODO 3.6 consider using a single config attribute instead of many misused <set>s; eg, use padding instead of width -->
+<!-- TODO 3.6 consider using a single config attribute instead of many misused <set>s; eg, use padding instead of width. JS API for such attributes? -->

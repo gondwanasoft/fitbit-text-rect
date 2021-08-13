@@ -1,7 +1,7 @@
 import * as config from './config';
 import { constructWidgets } from '../construct-widgets';
 
-export const construct = el => {
+export const constructTextRect = el => {
   const textEl = el.getElementById('text');
   const rectEl = el.getElementById('rect');
   // Because the following attributes are set only when the widget is constructed, they won't respond to subsequent changes.
@@ -31,4 +31,4 @@ export const construct = el => {
   el.redraw();
 }
 
-if (config.autoConstruct) constructWidgets('text-rect', construct);
+if (config.autoConstruct) constructWidgets('text-rect', constructTextRect);

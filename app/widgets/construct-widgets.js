@@ -11,4 +11,3 @@ export const constructWidgets = (widgetType, construct) => {
     }
   });
 }
-// TODO 3.05 if autoConstruct is false, export a function for constructing

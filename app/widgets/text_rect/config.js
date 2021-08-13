@@ -1,1 +1,1 @@
-export const autoConstruct = true;      // automatically search whole of document for <use href="#text-rect"...> elements and convert them to text-rect widgets
+export const autoConstruct = false;      // automatically search whole of document for <use href="#text-rect"...> elements and convert them to text-rect widgets
