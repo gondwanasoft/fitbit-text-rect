@@ -1,3 +1,4 @@
+import * as config from './config';
 import { constructWidgets } from '../construct-widgets';
 
 const construct = el => {
@@ -28,4 +29,4 @@ const construct = el => {
   el.redraw();
 }
 
-constructWidgets('text-rect', construct);
+if (config.autoConstruct) constructWidgets('text-rect', construct);

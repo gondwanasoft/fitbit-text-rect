@@ -1,6 +1,6 @@
 <svg>
-  <image href="cat.jpg" width="100%" height="100%" />
-  <use id="myTextRect" href="#text-rect" x="50%" y="40" width="0" height="0" >
+  <image href="vw.jpg" width="100%" height="100%" />
+  <use id="myTextRect" href="#text-rect" x="50%" >
     <set href="#text" attributeName="text-anchor" to="middle" />
     <set href="#text" attributeName="text-length" to="32" />    <!-- It doesn't seem to be possible to update text-length in CSS -->
     <!--<set href="#text" attributeName="text-buffer" to="[Default]" />-->
@@ -10,15 +10,15 @@
     <!--<set href="#rect" attributeName="opacity" to="0.3" />-->
     <set href="#rect" attributeName="x" to="0" />       <!-- px to shift rect to right -->
     <set href="#rect" attributeName="y" to="1" />       <!-- px to shift rect down -->
-    <set href="#rect" attributeName="width" to="5" />   <!-- px to add to left and right of rect -->
     <set href="#rect" attributeName="height" to="0" />  <!-- px to add to top and bottom of rect -->
-    <set href="#rect" attributeName="rx" to="7" />
-    <set href="#rect" attributeName="ry" to="7" />
+    <!--<set href="#rect" attributeName="rx" to="7" />
+    <set href="#rect" attributeName="ry" to="7" />-->
   </use>
 
-  <use id="myTextRect2" href="#text-rect" x="50%" y="240" width="0" height="0" >
+  <use id="myTextRect2" href="#text-rect" x="50%" y="295" >
     <set href="#text" attributeName="text-length" to="32" />    <!-- It doesn't seem to be possible to update text-length in CSS -->
-    <set href="#text" attributeName="text-buffer" to="It is very stupid." />
+    <set href="#text" attributeName="text-buffer" to="It is mostly orange." />
   </use>
 
 </svg>
+<!-- TODO 3.6 consider using a single config attribute instead of many misused <set>s; eg, use padding instead of width -->
