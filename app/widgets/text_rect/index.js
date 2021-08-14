@@ -1,5 +1,5 @@
 import * as config from './config';
-import { constructWidgets } from '../construct-widgets';
+import { constructWidgets } from './construct-widgets';
 
 export const constructTextRect = el => {
   const textEl = el.getElementById('text');
