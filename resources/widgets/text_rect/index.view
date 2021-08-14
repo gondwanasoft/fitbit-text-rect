@@ -1,6 +1,6 @@
 <defs>
   <symbol id="text-rect" type="text-rect" class="text-rect" width="0" height="0" >
-    <rect id="rect" />
+    <rect id="rect" class="rect"/>
     <text id="text" />
   </symbol>
 </defs>

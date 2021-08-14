@@ -15,6 +15,7 @@
 }
 
 #myTextRect2 rect {
+  y: 2;
   rx: 16;
   ry: 16;
 }

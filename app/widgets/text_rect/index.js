@@ -2,6 +2,8 @@ import * as config from './config';
 import { constructWidgets } from './construct-widgets';
 
 export const constructTextRect = el => {
+  el.class = el.class;    // bring forward (ie, trigger) application of CSS styles
+
   const textEl = el.getElementById('text');
   const rectEl = el.getElementById('rect');
   // Because the following attributes are set only when the widget is constructed, they won't respond to subsequent changes.
@@ -9,8 +11,6 @@ export const constructTextRect = el => {
   const offsetVert = rectEl.y ?? 0;
   const paddingHoriz = rectEl.width ?? 5;
   const paddingVert = rectEl.height ?? 0;
-
-  el.class = el.class;    // bring forward (ie, trigger) application of CSS styles
 
   el.redraw = () => {
     const bbox = textEl.getBBox();
