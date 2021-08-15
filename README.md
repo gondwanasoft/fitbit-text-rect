@@ -8,8 +8,10 @@ Construction
 Widgets need to be constructed before they can be used and display correctly. There are three ways to do this:
 
 * Set `auto-construct` to `true` in `config.js`
-* Call `constructTextRect()` to construct a specific element
-* Call `constructWidgets()` to construct all widgets within a specific element
+* Call `constructTextRect()` to construct a specific text-rect
+* Call `constructTextRects()` to construct all text-rects within a specific element
+
+Using `auto-construct` is easiest, since no additional and non-standard coding is required. The only disadvantage of using `auto-construct` is that it searches the whole of `document` for text-rects. This can be quite slow if your `document` is large, in which case one of the manual construction approaches should be used.
 
 Redraw
 -
