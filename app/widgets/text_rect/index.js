@@ -34,4 +34,9 @@ export const constructTextRect = el => {
   el.redraw();
 }
 
+export const constructTextRects = parentEl => {
+  // Constructs all text-rect widgets within parentEl ElementSearch.
+  constructWidgets('text-rect', constructTextRect);
+}
+
 if (config.autoConstruct) constructWidgets('text-rect', constructTextRect);
