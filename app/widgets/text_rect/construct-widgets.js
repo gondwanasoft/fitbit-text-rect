@@ -12,6 +12,6 @@ export const constructWidgets = (widgetType, construct, parent = document) => {
   widgets.forEach(widget => {
     if (widget.id !== widget.type)     // needed because old firmware will find the <use> AND the <symbol> for each widget instance
       construct(widget);
-      // TODO 3.5 distinguish between 'construct' (add members to el) and 'draw' (lay out visible elements); need 'autoDraw' in config.js?
+      // TODO 3.5 distinguish between 'construct' (add members to el) and 'redraw' (lay out visible elements); need 'autoDraw' in config.js?
   });
 }

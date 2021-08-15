@@ -13,6 +13,9 @@ export const constructTextRect = el => {
   const paddingVert = rectEl.height ?? 0;
 
   el.redraw = () => {
+    // This function must be called when .style.display is changed from 'none'. This can be done directly or via some other API function.
+    if (el.style.display === 'none') return;
+
     const bbox = textEl.getBBox();
     const anchorOffset = textEl.textAnchor==='start'? 0 : (textEl.textAnchor==='end'? bbox.width : bbox.width / 2);
     rectEl.x = offsetHoriz - paddingHoriz - anchorOffset;

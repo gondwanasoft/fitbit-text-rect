@@ -1,5 +1,6 @@
 #myTextRect {
   y: 35;
+  display: none;
 }
 
 #myTextRect rect {
