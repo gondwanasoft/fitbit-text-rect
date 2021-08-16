@@ -1,7 +1,7 @@
 # fitbit-text-rect
 A simplistic widget for Fitbit OS that displays text in a rectangle. The rectangle automatically resizes to fit the text, which can be changed at run-time.
 
-![examples](screenshot.jpg#center)
+![examples](screenshot.png#center)
 
 Construction
 -
