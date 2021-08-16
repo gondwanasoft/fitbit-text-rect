@@ -1,5 +1,5 @@
 import * as config from './config';
-import { constructWidgets } from './construct-widgets';
+import { constructWidgets, getConfig } from './construct-widgets';
 
 export const constructTextRect = el => {
   el.class = el.class;    // bring forward (ie, trigger) application of CSS styles
@@ -7,21 +7,38 @@ export const constructTextRect = el => {
   const textEl = el.getElementById('text');
   const rectEl = el.getElementById('rect');
   // Because the following attributes are set only when the widget is constructed, they won't respond to subsequent changes.
-  const offsetHoriz = rectEl.x ?? 0;
-  const offsetVert = rectEl.y ?? 0;
-  const paddingHoriz = rectEl.width ?? 5;
-  const paddingVert = rectEl.height ?? 0;
+  let paddingLeft = 5, paddingRight = 5, paddingTop = 0, paddingBottom = 0;
+
+  const config = getConfig(el);
+  for (const name in config) {
+    const value = Number(config[name]);   // convert to Number here because the only allowed values are numbers
+    //console.log(`constructTextRect() "${name}"="${value}"`);
+    switch(name) {
+      case 'padding-left':
+        paddingLeft = value;
+        break;
+      case 'padding-right':
+        paddingRight = value;
+        break;
+      case 'padding-top':
+        paddingTop = value;
+        break;
+      case 'padding-bottom':
+        paddingBottom = value;
+        break;
+    }
+  }
 
   el.redraw = () => {
     // This function must be called when .style.display is changed from 'none'. This can be done directly or via some other API function.
     if (el.style.display === 'none') return;
 
-    const bbox = textEl.getBBox();
+    const bbox = textEl.getBBox();    // warning: this won't work if the element is rotated due to bug in Fitbit OS
     const anchorOffset = textEl.textAnchor==='start'? 0 : (textEl.textAnchor==='end'? bbox.width : bbox.width / 2);
-    rectEl.x = offsetHoriz - paddingHoriz - anchorOffset;
-    rectEl.width = bbox.width + offsetHoriz + 2 * paddingHoriz;
-    rectEl.y = bbox.top - el.y + offsetVert - paddingVert;
-    rectEl.height = bbox.height + offsetVert + 2 * paddingVert;
+    rectEl.x = -paddingLeft - anchorOffset;
+    rectEl.width = bbox.width + paddingLeft + paddingRight;
+    rectEl.y = bbox.top - el.y - paddingTop;
+    rectEl.height = bbox.height + paddingTop + paddingBottom;
   }
 
   Object.defineProperty(el, 'text', {

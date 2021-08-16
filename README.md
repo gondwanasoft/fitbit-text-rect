@@ -23,4 +23,6 @@ Caveats
 -
 This is largely untested. The widget is probably lacking default attributes and may not respond to CSS.
 
+Due to a bug in Fitbit OS's getBBox(), text-rects won't display correctly if rotated.
+
 Pull requests are welcome!

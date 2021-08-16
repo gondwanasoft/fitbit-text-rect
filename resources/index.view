@@ -1,25 +1,21 @@
 <svg>
   <image href="vw.jpg" width="100%" height="100%" />
   <use id="myTextRect" href="#text-rect" x="50%" >
-    <set href="#text" attributeName="text-anchor" to="middle" />
     <set href="#text" attributeName="text-length" to="32" />    <!-- It doesn't seem to be possible to update text-length in CSS -->
     <!--<set href="#text" attributeName="text-buffer" to="[Default]" />-->
     <set href="#text" attributeName="font-family" to="Seville-Bold" />
     <set href="#text" attributeName="fill" to="black" />
     <set href="#rect" attributeName="fill" to="white" />
     <!--<set href="#rect" attributeName="opacity" to="0.3" />-->
-    <set href="#rect" attributeName="x" to="0" />       <!-- px to shift rect to right -->
-    <set href="#rect" attributeName="y" to="1" />       <!-- px to shift rect down -->
-    <set href="#rect" attributeName="height" to="0" />  <!-- px to add to top and bottom of rect -->
+    <set href="#config" attributeName="text-buffer" to="padding-top: -1; padding-bottom: 3" />
     <!--<set href="#rect" attributeName="rx" to="7" />
     <set href="#rect" attributeName="ry" to="7" />-->
   </use>
 
-  <use id="myTextRect2" href="#text-rect" x="50%" y="295" >
+  <use id="myTextRect2" href="#text-rect" >
     <set href="#text" attributeName="text-length" to="32" />    <!-- It doesn't seem to be possible to update text-length in CSS -->
     <set href="#text" attributeName="text-buffer" to="It is mostly orange." />
     <!--<set href="#rect" attributeName="y" to="10" />-->       <!-- px to shift rect down -->
   </use>
 
 </svg>
-<!-- TODO 3.6 consider using a single config attribute instead of many misused <set>s; eg, use padding instead of width. JS API for such attributes? -->

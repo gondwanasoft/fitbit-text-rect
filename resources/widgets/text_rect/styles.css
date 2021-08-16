@@ -2,7 +2,7 @@
   opacity: 0.5;
 }
 
-.text-rect text {
+.text-rect #text {
   text-anchor: middle;
   text-length: 8;
 }

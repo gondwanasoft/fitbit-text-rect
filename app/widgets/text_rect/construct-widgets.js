@@ -14,3 +14,25 @@ export const constructWidgets = (widgetType, construct, parent = document) => {
       construct(widget);
   });
 }
+
+export const getConfig = el => {
+  // Returns an object containing attribute:value pairs.
+  const configEl = el.getElementById('config');
+  if (!configEl) return {};
+
+  const config = {};
+  const attributes = configEl.text.split(';');
+  //console.log(`getConfig() config="${attributes}"`)
+  attributes.forEach(attribute => {
+    const colonIndex = attribute.indexOf(':');
+    const attributeName = attribute.substring(0, colonIndex).trim();
+    if (attributeName) {
+      const attributeValue = attribute.substring(colonIndex+1).trim();
+      //console.log(`getConfig() found entry "${attributeName}"="${attributeValue}"`)
+      config[attributeName] = attributeValue;
+    }
+  })
+  //console.log(`getConfig() config=${JSON.stringify(config)} (${Object.keys(config).length} entries)`);
+  return config;
+}
+// TODO 3.3 rename this file? widget-util?

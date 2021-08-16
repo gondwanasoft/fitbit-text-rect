@@ -10,19 +10,30 @@
   ry: 20;
 }
 
-#myTextRect text {
+#myTextRect #text {
+  text-anchor: middle;
   font-size: 40;
   text-length: 32;  /* Doesn't work, unfortunately; must change text-length in <use> */
 }
 
+#myTextRect2 {
+  x: 50%;
+  y: 295;
+}
+
 #myTextRect2 rect {
-  y: 2;
+  width: 5;
+  height: 0;
   rx: 16;
   ry: 16;
 }
 
-#myTextRect2 text {
+#myTextRect2 #text {
   text-length: 32;  /* Doesn't work, unfortunately; must change text-length in <use> */
   fill: orange;
   text-buffer: "myTextRect2";
+}
+
+#myTextRect2 #config {
+  text-buffer: "padding-left: 5; padding-right: 5; padding-top: -3; padding-bottom: 2;"
 }
