@@ -35,4 +35,3 @@ export const getConfig = el => {
   //console.log(`getConfig() config=${JSON.stringify(config)} (${Object.keys(config).length} entries)`);
   return config;
 }
-// TODO 3.3 rename this file? widget_utils?
