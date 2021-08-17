@@ -16,20 +16,21 @@ export const constructWidgets = (widgetType, construct, parent = document) => {
 }
 
 export const getConfig = el => {
-  // Returns an object containing attribute name:value pairs.
+  // el: template symbol element that may contain a <text id="config"> child. config may contain one or more propertyName:value declarations, like the HTML style attribute.
+  // Returns an object containing propertyName:value pairs.
   const configEl = el.getElementById('config');
   if (!configEl) return {};
 
   const config = {};
-  const attributes = configEl.text.split(';');
-  //console.log(`getConfig() config="${attributes}"`)
-  attributes.forEach(attribute => {
-    const colonIndex = attribute.indexOf(':');
-    const attributeName = attribute.substring(0, colonIndex).trim();
-    if (attributeName) {
-      const attributeValue = attribute.substring(colonIndex+1).trim();
-      //console.log(`getConfig() found entry "${attributeName}"="${attributeValue}"`)
-      config[attributeName] = attributeValue;
+  const properties = configEl.text.split(';');
+  //console.log(`getConfig() properties="${properties}"`)
+  properties.forEach(property => {
+    const colonIndex = property.indexOf(':');
+    const propertyName = property.substring(0, colonIndex).trim();
+    if (propertyName) {
+      const propertyValue = property.substring(colonIndex+1).trim();
+      //console.log(`getConfig() found entry "${propertyName}"="${propertyValue}"`)
+      config[propertyName] = propertyValue;
     }
   })
   //console.log(`getConfig() config=${JSON.stringify(config)} (${Object.keys(config).length} entries)`);
