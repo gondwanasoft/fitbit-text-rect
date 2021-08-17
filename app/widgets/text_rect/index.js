@@ -1,5 +1,5 @@
 import * as config from './config';
-import { constructWidgets, getConfig } from './construct-widgets';
+import { constructWidgets, getConfig } from './widget_utils';
 
 export const constructTextRect = el => {
   el.class = el.class;    // bring forward (ie, trigger) application of CSS styles
@@ -56,4 +56,4 @@ export const constructTextRects = parentEl => {
   constructWidgets('text-rect', constructTextRect);
 }
 
-if (config.autoConstruct) constructWidgets('text-rect', constructTextRect);
+if (config.autoConstruct) constructTextRects();

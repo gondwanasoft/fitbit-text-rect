@@ -16,7 +16,7 @@ export const constructWidgets = (widgetType, construct, parent = document) => {
 }
 
 export const getConfig = el => {
-  // Returns an object containing attribute:value pairs.
+  // Returns an object containing attribute name:value pairs.
   const configEl = el.getElementById('config');
   if (!configEl) return {};
 
@@ -35,4 +35,4 @@ export const getConfig = el => {
   //console.log(`getConfig() config=${JSON.stringify(config)} (${Object.keys(config).length} entries)`);
   return config;
 }
-// TODO 3.3 rename this file? widget-util?
+// TODO 3.3 rename this file? widget_utils?
