@@ -5,7 +5,6 @@
 
 #myTextRect rect {
   opacity: 0.3;
-  width: 10;   /* px to add to left and right of rect */
   rx: 20;
   ry: 20;
 }
@@ -22,8 +21,6 @@
 }
 
 #myTextRect2 rect {
-  width: 5;
-  height: 0;
   rx: 16;
   ry: 16;
 }
