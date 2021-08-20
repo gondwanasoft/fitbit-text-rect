@@ -16,5 +16,5 @@ const myTextRectEl = document.getElementById('myTextRect')
 console.log(`app/index.js ${myTextRectEl.getElementById('text').text}`)
 myTextRectEl.getElementById('text').textLength = 32
 myTextRectEl.text = "A Volkswagen."
-myTextRectEl.style.display = 'inherit';
+//myTextRectEl.style.display = 'inherit';
 myTextRectEl.redraw();    // must call this after changing .style.display from 'none'
