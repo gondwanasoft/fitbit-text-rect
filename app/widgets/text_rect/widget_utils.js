@@ -32,7 +32,7 @@ export const getConfig = el => {
       //console.log(`getConfig() found entry "${propertyName}"="${propertyValue}"`)
       config[propertyName] = propertyValue;
     }
-  })
+  });
   //console.log(`getConfig() config=${JSON.stringify(config)} (${Object.keys(config).length} entries)`);
   return config;
 }

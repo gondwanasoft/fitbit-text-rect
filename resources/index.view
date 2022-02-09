@@ -3,7 +3,7 @@
     <link rel="import" href="widgets/text_rect/index.defs" />
   </defs>
 
-  <image href="vw.jpg" width="100%" height="100%" display="none"/>
+  <image href="vw.jpg" width="100%" height="100%" />
   <use id="myTextRect" href="#text-rect" x="50%" >
     <set href="#text" attributeName="text-length" to="32" />    <!-- It doesn't seem to be possible to update text-length in CSS -->
     <!--<set href="#text" attributeName="text-buffer" to="[Default]" />-->
@@ -16,13 +16,13 @@
     <set href="#rect" attributeName="ry" to="7" />-->
   </use>
 
-  <use id="myTextRect2" href="#text-rect" display="none">
+  <use id="myTextRect2" href="#text-rect" >
     <set href="#text" attributeName="text-length" to="32" />    <!-- It doesn't seem to be possible to update text-length in CSS -->
     <set href="#text" attributeName="text-buffer" to="It is mostly orange." />
     <!--<set href="#rect" attributeName="y" to="10" />-->       <!-- px to shift rect down -->
   </use>
 
-  <use href="#text-rect" x="50%" y="168" >
+  <use href="#text-rect" x="50%" y="168" display="none" >
     <set href="#text" attributeName="text-length" to="32" />    <!-- It doesn't seem to be possible to update text-length in CSS -->
     <set href="#text" attributeName="text-buffer" to="I am a text-rect." />
     <set href="#text" attributeName="font-family" to="Seville-Bold" />

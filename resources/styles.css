@@ -3,7 +3,7 @@
   display: none;
 }
 
-#myTextRect rect {
+#myTextRect #rect {
   opacity: 0.3;
   rx: 20;
   ry: 20;
@@ -20,7 +20,7 @@
   y: 295;
 }
 
-#myTextRect2 rect {
+#myTextRect2 #rect {
   rx: 16;
   ry: 16;
 }

@@ -12,7 +12,6 @@ export const constructTextRect = el => {
   const config = getConfig(el);
   for (const name in config) {
     const value = Number(config[name]);   // convert to Number here because the only allowed values are numbers
-    //console.log(`constructTextRect() "${name}"="${value}"`);
     switch(name) {
       case 'padding-left':
         paddingLeft = value;
@@ -46,7 +45,7 @@ export const constructTextRect = el => {
       textEl.text = newValue;
       el.redraw();
     }
-  })
+  });
 
   el.redraw();
 }
